@@ -1,0 +1,19 @@
+<h2>Deposit form</h2>
+
+<form [formGroup]="depositForm" (ngSubmit)="submitForm($event)">
+
+  <div class="form-row">
+    <label>Amount</label>
+    <input type="number" formControlName="amount"/>
+  </div>
+
+  <div class="form-row">
+    <label>Email</label>
+    <input type="email" formControlName="email"/>
+  </div>
+
+  <div class="form-row">
+    <button type="submit" [disabled]="!depositForm.valid">Save</button>
+  </div>
+
+</form>

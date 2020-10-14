@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {CordovaService} from './cordova.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'ng-cordova-exercise';
+
+  constructor(private cordovaService: CordovaService) {
+    this.cordovaService.init();
+  }
+
 }
